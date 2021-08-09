@@ -15,7 +15,7 @@ public class InvoiceServicesTest {
         invoiceGenerator = new InvoiceGenerator();
     }
     /**
-     * Step 1
+     * Step 1.1
      * Purpose : Given distance and time,
      *           return total fare
      */
@@ -28,7 +28,7 @@ public class InvoiceServicesTest {
         assertEquals(215, fare, 0.0);
     }
     /**
-     * Step 2
+     * Step 1.2
      * Purpose: Given distance and time,
      *          return minimum fare as 5
      */
@@ -38,5 +38,31 @@ public class InvoiceServicesTest {
         int minute = 2;
         double fare = invoiceGenerator.calculateFare(distance, minute);
         assertEquals(5, fare, 0.0);
+    }
+    /**
+     * Step 2.1
+     * Purpose: Given distance and time for multiple rides,
+     *          return total fare.
+     */
+    @Test
+    public void givenDistanceAndMinute_shouldReturn_totalFare_forMultipleRides() {
+        Ride [] ride = {
+                new Ride(20.0, 15),
+                new Ride(0.3, 2),
+                new Ride(5.0, 3)
+        };
+        double fare = invoiceGenerator.calculateFare(ride);
+        assertEquals(273, fare,  0.0);
+    }
+
+    @Test
+    public void givenDistanceAndMinute_shouldReturntotalFare_forMultipleRides() {
+        Ride [] ride = {
+                new Ride(2.0, 15),
+                new Ride(0.5, 1),
+                new Ride(50.0, 30)
+        };
+        double fare = invoiceGenerator.calculateFare(ride);
+        assertEquals(571, fare,  0.0);
     }
 }
