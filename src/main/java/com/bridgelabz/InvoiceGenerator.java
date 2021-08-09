@@ -76,6 +76,27 @@ public class InvoiceGenerator {
             throw new InvalidInputException("Invalid Input!No Records Found");
         }
     }
+    /**
+     * Purpose : To calculate premium rides
+     */
+    public double calculateFare(String choice, double distance, int minute) {
+        if(choice.equalsIgnoreCase("Normal")) {
+            int costPerMinute =1;
+            double minCostPerKm =10;
+            double minfare = 5;
+            double totalfare = (distance * minCostPerKm) + (minute * costPerMinute);
+            return totalfare;
+        }else if(choice.equalsIgnoreCase("Premium")) {
+            int costPerMinute =2;
+            double minCostPerKm =15;
+            double minfare = 20;
+            double totalfare = (distance * minCostPerKm) + (minute * costPerMinute);
+            return totalfare;
+        }
+        double totalfare = (distance * minCostPerKm) + (minute * costPerMinute);
+        return totalfare;
+    }
+
 
 
 }
