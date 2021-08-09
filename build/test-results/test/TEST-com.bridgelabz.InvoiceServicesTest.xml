@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.InvoiceServicesTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-08-09T16:28:25" hostname="DESKTOP-M71IR21" time="0.005">
+<testsuite name="com.bridgelabz.InvoiceServicesTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2021-08-09T16:55:08" hostname="DESKTOP-M71IR21" time="0.009">
   <properties/>
-  <testcase name="givenMultipleRides_shouldReturn_invoiceSummary" classname="com.bridgelabz.InvoiceServicesTest" time="0.003"/>
+  <testcase name="givenMultipleRides_shouldReturn_invoiceSummary" classname="com.bridgelabz.InvoiceServicesTest" time="0.004"/>
   <testcase name="givenDistanceAndMinute_shouldReturn_totalFare" classname="com.bridgelabz.InvoiceServicesTest" time="0.0"/>
+  <testcase name="givenUserId_shouldReturn_InvalidInputException" classname="com.bridgelabz.InvoiceServicesTest" time="0.001"/>
   <testcase name="givenDistanceAndMinute_shouldReturn_totalFare_forMultipleRides" classname="com.bridgelabz.InvoiceServicesTest" time="0.0"/>
-  <testcase name="givenDistanceAndMinute_shouldReturntotalFare_forMultipleRides" classname="com.bridgelabz.InvoiceServicesTest" time="0.001"/>
+  <testcase name="givenUserId_shouldreturn_InvoiceSummary" classname="com.bridgelabz.InvoiceServicesTest" time="0.0"/>
+  <testcase name="givenDistanceAndMinute_shouldReturntotalFare_forMultipleRides" classname="com.bridgelabz.InvoiceServicesTest" time="0.0"/>
   <testcase name="givenDistanceAndMinute_shouldReturn_minFare" classname="com.bridgelabz.InvoiceServicesTest" time="0.0"/>
+  <testcase name="givenUserId_shouldReturn_InvoiceSummary" classname="com.bridgelabz.InvoiceServicesTest" time="0.0"/>
   <testcase name="givenMultipleRides_shouldReturn_InvoiceSummary" classname="com.bridgelabz.InvoiceServicesTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

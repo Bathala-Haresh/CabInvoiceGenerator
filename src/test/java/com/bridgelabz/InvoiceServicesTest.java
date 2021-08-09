@@ -88,4 +88,26 @@ public class InvoiceServicesTest {
         InvoiceSummary expected = new InvoiceSummary(3, 570, 190);
         assertEquals(expected, invoiceSummary);
     }
+    @Test
+    public void givenUserId_shouldReturn_InvoiceSummary() throws InvalidInputException {
+        String user ="U01";
+        InvoiceRecords invoicerecords = invoiceGenerator.findInvoice(user);
+        InvoiceRecords expected = new InvoiceRecords("U01",3,363,121);
+        assertEquals(expected, invoicerecords);
+    }
+
+    @Test
+    public void givenUserId_shouldreturn_InvoiceSummary() throws InvalidInputException {
+        String user ="U04";
+        InvoiceRecords invoicerecords = invoiceGenerator.findInvoice(user);
+        InvoiceRecords expected = new InvoiceRecords("U04",8,480,60);
+        assertEquals(expected, invoicerecords);
+    }
+
+    @Test
+    public void givenUserId_shouldReturn_InvalidInputException() throws InvalidInputException {
+        String user =" ";
+        InvoiceRecords invoicerecords = invoiceGenerator.findInvoice(user);
+        assertEquals(null, invoicerecords);
+    }
 }
